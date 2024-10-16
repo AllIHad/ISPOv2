@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>AI.Tech - Artificial Intelligence HTML Template</title>
+    <title>ISPO</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -22,8 +22,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="{{asset('lib/animate/animate.min.css')}}" rel="stylesheet">
+    <link href="{{asset('lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
@@ -80,6 +80,7 @@
         </div>
     </div>
     <!-- Navbar End -->
+
     {{ $slot }}
 
     <!-- JavaScript Libraries -->
