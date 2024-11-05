@@ -18,7 +18,15 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'namaPemilik',
+        'asosiasi',
+        'kontakAsosiai',
+        'areaLahan',
+        'kecamatanLahan',
+        'batasWilayahLahan',
+        'alamatLahan',
+        'luasLahan',
+        'username',
         'email',
         'password',
         'role'
@@ -47,5 +55,5 @@ class User extends Authenticatable
         ];
     }
 
-    protected $table = 'user';
+    protected $table = 'users';
 }

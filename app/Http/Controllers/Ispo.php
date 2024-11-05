@@ -12,5 +12,8 @@ class Ispo extends Controller
         return view('welcome');
     }
 
-    public function lol() {}
+    public function dashboard() {
+
+        return view('dashboard.index');
+    }
 }

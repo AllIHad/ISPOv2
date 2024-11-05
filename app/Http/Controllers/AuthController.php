@@ -25,7 +25,27 @@ class AuthController extends Controller
         }
 
         return redirect('/login')->with('error', 'Authentication failed');
-    }   
+    }
+
+    public function register(Request $request)
+    {
+
+        $validate = request()->validate([
+            'namaPemilik' => 'required',
+            'asosiasi' => 'required',
+            'kontakAsosiai' => 'required',
+            'areaLahan' => 'required',
+            'kecamatanLahan' => 'required',
+            'batasWilayahLahan' => 'required',
+            'alamatLahan' => 'required',
+            'luasLahan' => 'required',
+            'username' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+        ]);
+
+    
+    }
 
     public function logout()
     {

@@ -71,7 +71,14 @@
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
-                        <a href="contact.html" class="nav-item nav-link">Login</a>
+                        @if(Auth::user())
+                        <form action="{{ route('logout') }}" method="POST">
+                            @csrf
+                            <button type="submit">Logout</button>
+                        </form>
+                        @else
+                        <a href="{{ route('loginPage') }}" class="nav-item nav-link">Login</a>
+                        @endif
                     </div>
                     <butaton type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
                         data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
