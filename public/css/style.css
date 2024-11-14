@@ -83,6 +83,7 @@ h6,
 .sticky-top {
     top: -150px;
     transition: .5s;
+    background-color: #1363C6;
 }
 
 .navbar {
