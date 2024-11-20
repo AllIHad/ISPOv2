@@ -7,10 +7,13 @@
                 <div class="card h-100 shadow-sm">
                     <img src="{{asset('img/pohonsawit.jpg')}}" class="card-img-top img-thumbnail" alt="Kerja Praktek Image">
                     <div class="card-body ">
-                        <h3 class="card-title">IDENTITY OF <br>THE OIL PALM <br>SMALLHOLDER</h3>
+                        <h3 class="card-title">IDENTITY OF THE OIL PALM <br>SMALLHOLDER</h3>
                         <p class="card-text text-muted"><br>Information</p>
                         <span class="status status-pending">Have Filled in the Oil palm smallholder's Identity <br><br></span>
-                        <a href="" class="btn btn-outline-primary">Click Here</a>
+                        <div class="d-flex justify-content-between">
+                            <a href="{{ route('identityForm') }}" class="btn btn-outline-primary">Click Here</a>
+                            <a href="" class="btn btn-outline-primary ">Detail</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -20,10 +23,13 @@
                 <div class="card h-100 shadow-sm">
                     <img src="{{asset('img/minyaksawit.jpg')}}" class="card-img-top img-thumbnail" alt="Skripsi Image">
                     <div class="card-body">
-                        <h3 class="card-title pt-4">PLANTATION <br>PERFORMANCE </h3>
+                        <h3 class="card-title ">PLANTATION <br>PERFORMANCE </h3>
                         <p class="card-text text-muted"><br>Information</p>
                         <span class="status status-pending">Have Filled in the Plantation Performance <br><br></span>
-                        <a href="" class="btn btn-outline-primary">Click Here</a>
+                        <div class="d-flex justify-content-between">
+                            <a href="" class="btn btn-outline-primary">Click Here</a>
+                            <a href="" class="btn btn-outline-primary ">Detail</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -33,10 +39,13 @@
                 <div class="card h-100 shadow-sm">
                     <img src="{{asset('img/buahsawit.jpg')}}" class="card-img-top img-thumbnail" alt="Skripsi Image">
                     <div class="card-body">
-                        <h3 class="card-title pt-4">ISPO <br>STANDART </h3>
+                        <h3 class="card-title ">ISPO <br>STANDART </h3>
                         <p class="card-text text-muted"><br>Information</p>
                         <span class="status status-pending">Have Filled in the ISPO STANDART <br><br></span>
-                        <a href="" class="btn btn-outline-primary">Click Here</a>
+                        <div class="d-flex justify-content-between">
+                            <a href="" class="btn btn-outline-primary">Click Here</a>
+                            <a href="" class="btn btn-outline-primary ">Detail</a>
+                        </div>
                     </div>
                 </div>
             </div>
