@@ -18,18 +18,37 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'namaPemilik',
-        'asosiasi',
-        'kontakAsosiai',
-        'areaLahan',
-        'kecamatanLahan',
-        'batasWilayahLahan',
-        'alamatLahan',
-        'luasLahan',
-        'username',
+        'registrationNumber',
         'email',
+        'username',
         'password',
-        'role'
+        'gender',
+        'nationalID',
+        'taxID',
+        'phone',
+        'address',
+        'rtRw',
+        'hamlet',
+        'village',
+        'subDistrict',
+        'districtCity',
+        'province',
+        'smallholder',
+        'organizationName',
+        'organizationEmail',
+        'age',
+        'dob',
+        'placeOfBirth',
+        'religion',
+        'ethnicity',
+        'maritalStatus',
+        'familyMembers',
+        'maleFamilyMembers',
+        'femaleFamilyMembers',
+        'lastEducationLevel',
+        'durationOfEducation',
+        'palmOilPlantationExperience',
+        'otherJob'
     ];
 
     /**

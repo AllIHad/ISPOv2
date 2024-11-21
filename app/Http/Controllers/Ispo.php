@@ -29,10 +29,11 @@ class Ispo extends Controller
         ]);
     }
 
-    public function submittedIdentity($slug, Request $request)
+    public function submittedIdentity(Request $request, $slug)
     {
+        $user = User::findOrFail($slug);
 
-        $validatedData = $request->validate([
+        $request->validate([
             'registrationNumber' => 'required',
             'email' => 'required',
             'gender' => 'required',
@@ -64,7 +65,7 @@ class Ispo extends Controller
             'otherJob' => 'required'
         ]);
 
-        $user = User::where('id', $slug)->firstOrFail();
+        // dd($user->all());    
 
         $user->update([
             'registrationNumber' => $request->registrationNumber,
@@ -99,5 +100,14 @@ class Ispo extends Controller
         ]);
 
         return redirect('/dashboard')->with('success', 'Data Has Updated');
+    }
+
+    public function ispo()
+    {
+        $ispo = User::where('id', Auth::user()->id)->firstOrFail();
+
+        return view('form.ispoForm', [
+            'ispo' => $ispo
+        ]);
     }
 }

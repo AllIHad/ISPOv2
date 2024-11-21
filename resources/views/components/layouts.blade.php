@@ -53,7 +53,9 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto ">
                         <a href="{{ route('landingPage') }}" class="nav-item nav-link">Home</a>
+                        @if(Auth::user())
                         <a href="{{ route('dashboardPage') }}" class="nav-item nav-link">Dashboard</a>
+                        @endif
                         @if(Auth::user())
                         <form action="{{ route('logout') }}" method="POST">
                             @csrf
@@ -89,10 +91,10 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="" href="#">SIM.ISPO</a>, All Right Reserved.
+                        &copy; <a class="" href="{{ route('landingPage') }}">SIM.ISPO</a>, All Right Reserved.
 
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="" href="https://htmlcodex.com">Noveri Lysbetti Marpaung S.T., MSc</a> 
+                        Designed By <a class="" target="_blank" href="https://scholar.google.co.id/citations?user=KRJN1I8AAAAJ&hl=en">Noveri Lysbetti Marpaung S.T., MSc</a> 
                     </div>
                 </div>
             </div>

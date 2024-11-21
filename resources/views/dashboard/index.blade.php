@@ -12,7 +12,6 @@
                         <span class="status status-pending">Have Filled in the Oil palm smallholder's Identity <br><br></span>
                         <div class="d-flex justify-content-between">
                             <a href="{{ route('identityForm') }}" class="btn btn-outline-primary">Click Here</a>
-                            <a href="" class="btn btn-outline-primary ">Detail</a>
                         </div>
                     </div>
                 </div>
@@ -28,7 +27,6 @@
                         <span class="status status-pending">Have Filled in the Plantation Performance <br><br></span>
                         <div class="d-flex justify-content-between">
                             <a href="" class="btn btn-outline-primary">Click Here</a>
-                            <a href="" class="btn btn-outline-primary ">Detail</a>
                         </div>
                     </div>
                 </div>
@@ -43,7 +41,7 @@
                         <p class="card-text text-muted"><br>Information</p>
                         <span class="status status-pending">Have Filled in the ISPO STANDART <br><br></span>
                         <div class="d-flex justify-content-between">
-                            <a href="" class="btn btn-outline-primary">Click Here</a>
+                            <a href="{{ route('ispoForm') }}" class="btn btn-outline-primary">Click Here</a>
                             <a href="" class="btn btn-outline-primary ">Detail</a>
                         </div>
                     </div>
