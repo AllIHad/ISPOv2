@@ -26,7 +26,7 @@
                         <p class="card-text text-muted"><br>Information</p>
                         <span class="status status-pending">Have Filled in the Plantation Performance <br><br></span>
                         <div class="d-flex justify-content-between">
-                            <a href="" class="btn btn-outline-primary">Click Here</a>
+                            <a href="{{ route('plantationForm') }}" class="btn btn-outline-primary">Click Here</a>
                         </div>
                     </div>
                 </div>

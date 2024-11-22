@@ -29,6 +29,14 @@ class Ispo extends Controller
         ]);
     }
 
+    public function plantation(){
+
+
+        return view('form.plantationForm', [
+
+        ]);
+    }
+
     public function submittedIdentity(Request $request, $slug)
     {
         $user = User::findOrFail($slug);
