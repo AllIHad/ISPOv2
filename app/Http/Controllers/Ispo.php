@@ -29,12 +29,11 @@ class Ispo extends Controller
         ]);
     }
 
-    public function plantation(){
+    public function plantation()
+    {
 
 
-        return view('form.plantationForm', [
-
-        ]);
+        return view('form.plantationForm', []);
     }
 
     public function submittedIdentity(Request $request, $slug)
@@ -117,5 +116,10 @@ class Ispo extends Controller
         return view('form.ispoForm', [
             'ispo' => $ispo
         ]);
+    }
+
+    public function detailIspo() {
+
+        return view('dashboard.detailIspo');
     }
 }

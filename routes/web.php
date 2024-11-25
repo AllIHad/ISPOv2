@@ -11,6 +11,7 @@ Route::get('/identityForm', [Ispo::class, 'identity'])->name('identityForm');
 Route::put('/identity/{slug}', [Ispo::class, 'submittedIdentity'])->name('submittedIdentity');
 Route::get('/palntationForm', [Ispo::class, 'plantation'])->name('plantationForm');
 Route::get('/ispoForm', [Ispo::class, 'ispo'])->name('ispoForm');
+Route::get('/ispoDetail', [Ispo::class, 'detailIspo'])->name('ispoDetail');
 Route::post('/loginAuth', [AuthController::class, 'authenticate'])->name('login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 

@@ -1,33 +1,34 @@
 <x-layouts>
     <div class="container my-5">
         <h2 class="border-bottom mb-4 pb-3">Plantation Performance</h2>
-        <form>
+        <form action="" method="post">
+            @csrf
             <div class="row g-5">
                 <!-- Left Column -->
                 <div class="col-md-6">
                     <div class="mb-3">
                         <label for="total-area" class="form-label">Total Oil Palm Plantation Area (ha)</label>
-                        <input type="text" class="form-control" id="total-area">
+                        <input type="text" class="form-control" id="total-area" name="plantationArea">
                     </div>
                     <div class="mb-3">
                         <label for="mature-plants" class="form-label">Mature Plants (TM) (ha)</label>
-                        <input type="text" class="form-control" id="mature-plants">
+                        <input type="text" class="form-control" id="mature-plants" name="maturePlant">
                     </div>
                     <div class="mb-3">
                         <label for="immature-plants" class="form-label">Immature Plants (TBM) (ha)</label>
-                        <input type="text" class="form-control" id="immature-plants">
+                        <input type="text" class="form-control" id="immature-plants" name="immaturePlant">
                     </div>
                     <div class="mb-3">
                         <label for="age-producing-plants" class="form-label">Age of Producing Oil Palm Plants (Year)</label>
-                        <input type="text" class="form-control" id="age-producing-plants">
+                        <input type="number" class="form-control" id="age-producing-plants" name="producingOil">
                     </div>
                     <div class="mb-3">
                         <label for="age-immature-plants" class="form-label">Age of Immature Oil Palm Plants (Year)</label>
-                        <input type="text" class="form-control" id="age-immature-plants">
+                        <input type="number" class="form-control" id="age-immature-plants" name="immatureOil">
                     </div>
                     <div class="mb-3">
                         <label for="origin-land" class="form-label">Origin Of Oil Palm Plantation Land (Forest, Rubber, Etc.)</label>
-                        <input type="text" class="form-control" id="origin-land">
+                        <input type="text" class="form-control" id="origin-land" name="">
                     </div>
                     <div class="mb-3">
                         <label for="ownership-status" class="form-label">Ownership Status Of Oil Palm Plantation (Owned, Rented, Etc.)</label>
@@ -118,11 +119,10 @@
                         <input type="text" class="form-control" id="plantation-income">
                     </div>
                 </div>
-            </div>
-
-            <div class="d-flex justify-content-start">
-                <button type="submit" class="btn btn-outline-primary">Submit</button>
-            </div>
+                <div class="d-flex justify-content-start">
+                    <button type="submit" class="btn btn-outline-primary">Submit</button>
+                </div>
+            </div>  
         </form>
     </div>
 </x-layouts>

@@ -13,6 +13,19 @@ return new class extends Migration
     {
         Schema::create('plantations', function (Blueprint $table) {
             $table->id();
+            $table->string('plantationArea');
+            $table->string('maturePlant');
+            $table->string('producingOil');
+            $table->string('immatureOil');
+            $table->string('plantationArea');
+            $table->string('plantationArea');
+            $table->string('plantationArea');
+            $table->string('plantationArea');
+            $table->string('plantationArea');
+            $table->string('plantationArea');
+            $table->string('plantationArea');
+            $table->string('plantationArea');
+            $table->string('plantationArea');
             $table->timestamps();
         });
     }
