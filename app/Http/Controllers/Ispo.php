@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Plantation;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -31,9 +32,145 @@ class Ispo extends Controller
 
     public function plantation()
     {
+        $plantation = Plantation::where('userID', Auth::user()->id)->first();
 
+        return view('form.plantationForm', [
+            'plantation' => $plantation
+        ]);
+    }
 
-        return view('form.plantationForm', []);
+    public function createdPlantation(Request $request)
+    {
+
+        $request->validate([
+            'plantationArea' => 'required',
+            'maturePlant' => 'required',
+            'immaturePlant' => 'required',
+            'producingOil' => 'required',
+            'immatureOil' => 'required',
+            'plantationLand' => 'required',
+            'ownershipStatus' => 'required',
+            'legalStatus' => 'required',
+            'spatialPlan' => 'required',
+            'stdb' => 'required',
+            'sppl' => 'required',
+            'soilType' => 'required',
+            'seedlingType' => 'required',
+            'nitgrogenFertilizer' => 'required',
+            'phosphorusFertilizer' => 'required',
+            'potassiumFertilizer' => 'required',
+            'magnesiumFertilizer' => 'required',
+            'boronFertilizer' => 'required',
+            'copperFertilizer' => 'required',
+            'discClearing' => 'required',
+            'rowClearing' => 'required',
+            'pruning' => 'required',
+            'harvestingFrequency' => 'required',
+            'ffbProduction' => 'required',
+            'ffbSold' => 'required',
+            'ffbPrice' => 'required',
+            'plantationIncome' => 'required',
+        ]);
+
+        Plantation::create([
+            'userID' => Auth::user()->id,
+            'plantationArea' => $request->plantationArea,
+            'maturePlant' => $request->maturePlant,
+            'immaturePlant' => $request->immaturePlant,
+            'producingOil' => $request->producingOil,
+            'immatureOil' => $request->immatureOil,
+            'plantationLand' => $request->plantationLand,
+            'ownershipStatus' => $request->ownershipStatus,
+            'legalStatus' => $request->legalStatus,
+            'spatialPlan' => $request->spatialPlan,
+            'stdb' => $request->stdb,
+            'sppl' => $request->sppl,
+            'soilType' => $request->soilType,
+            'seedlingType' => $request->seedlingType,
+            'nitgrogenFertilizer' => $request->nitgrogenFertilizer,
+            'phosphorusFertilizer' => $request->phosphorusFertilizer,
+            'potassiumFertilizer' => $request->potassiumFertilizer,
+            'magnesiumFertilizer' => $request->magnesiumFertilizer,
+            'boronFertilizer' => $request->boronFertilizer,
+            'copperFertilizer' => $request->copperFertilizer,
+            'discClearing' => $request->discClearing,
+            'rowClearing' => $request->rowClearing,
+            'pruning' => $request->pruning,
+            'harvestingFrequency' => $request->harvestingFrequency,
+            'ffbProduction' => $request->ffbProduction,
+            'ffbSold' => $request->ffbSold,
+            'ffbPrice' => $request->ffbPrice,
+            'plantationIncome' => $request->plantationIncome,
+        ]);
+
+        return redirect('/dashboard')->with('success', 'Data Has Created');
+    }
+
+    public function updatePlantation($slug, Request $request)
+    {
+        $plantation = Plantation::where('id', $slug)->firstOrFail();
+
+        $request->validate([
+            'plantationArea' => 'required',
+            'maturePlant' => 'required',
+            'immaturePlant' => 'required',
+            'producingOil' => 'required',
+            'immatureOil' => 'required',
+            'plantationLand' => 'required',
+            'ownershipStatus' => 'required',
+            'legalStatus' => 'required',
+            'spatialPlan' => 'required',
+            'stdb' => 'required',
+            'sppl' => 'required',
+            'soilType' => 'required',
+            'seedlingType' => 'required',
+            'nitgrogenFertilizer' => 'required',
+            'phosphorusFertilizer' => 'required',
+            'potassiumFertilizer' => 'required',
+            'magnesiumFertilizer' => 'required',
+            'boronFertilizer' => 'required',
+            'copperFertilizer' => 'required',
+            'discClearing' => 'required',
+            'rowClearing' => 'required',
+            'pruning' => 'required',
+            'harvestingFrequency' => 'required',
+            'ffbProduction' => 'required',
+            'ffbSold' => 'required',
+            'ffbPrice' => 'required',
+            'plantationIncome' => 'required',
+        ]);
+
+        $plantation->update([
+            'plantationArea' => $request->plantationArea,
+            'maturePlant' => $request->maturePlant,
+            'immaturePlant' => $request->immaturePlant,
+            'producingOil' => $request->producingOil,
+            'immatureOil' => $request->immatureOil,
+            'plantationLand' => $request->plantationLand,
+            'ownershipStatus' => $request->ownershipStatus,
+            'legalStatus' => $request->legalStatus,
+            'spatialPlan' => $request->spatialPlan,
+            'stdb' => $request->stdb,
+            'sppl' => $request->sppl,
+            'soilType' => $request->soilType,
+            'seedlingType' => $request->seedlingType,
+            'nitgrogenFertilizer' => $request->nitgrogenFertilizer,
+            'phosphorusFertilizer' => $request->phosphorusFertilizer,
+            'potassiumFertilizer' => $request->potassiumFertilizer,
+            'magnesiumFertilizer' => $request->magnesiumFertilizer,
+            'boronFertilizer' => $request->boronFertilizer,
+            'copperFertilizer' => $request->copperFertilizer,
+            'discClearing' => $request->discClearing,
+            'rowClearing' => $request->rowClearing,
+            'pruning' => $request->pruning,
+            'harvestingFrequency' => $request->harvestingFrequency,
+            'ffbProduction' => $request->ffbProduction,
+            'ffbProduction' => $request->ffbProduction,
+            'ffbPrice' => $request->ffbPrice,
+            'plantationIncome' => $request->plantationIncome,
+        ]);
+
+        return redirect('/dashboard')->with('success', 'Data Has Created');
     }
 
     public function submittedIdentity(Request $request, $slug)
@@ -118,7 +255,8 @@ class Ispo extends Controller
         ]);
     }
 
-    public function detailIspo() {
+    public function detailIspo()
+    {
 
         return view('dashboard.detailIspo');
     }

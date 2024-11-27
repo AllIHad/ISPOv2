@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('ispos', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('userID');
             $table->timestamps();
         });
     }
