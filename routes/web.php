@@ -13,6 +13,7 @@ Route::get('/plantationForm', [Ispo::class, 'plantation'])->name('plantationForm
 Route::post('/createdPalntationForm', [Ispo::class, 'createdPlantation'])->name('createdPlantationForm');
 Route::put('/UpdatePalntationForm/{slug}', [Ispo::class, 'updatePlantation'])->name('UpdatePlantationForm');
 Route::get('/ispoForm', [Ispo::class, 'ispo'])->name('ispoForm');
+Route::post('/createdIspo', [Ispo::class, 'createIspo'])->name('createIspo');
 Route::get('/ispoDetail', [Ispo::class, 'detailIspo'])->name('ispoDetail');
 Route::post('/loginAuth', [AuthController::class, 'authenticate'])->name('login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');

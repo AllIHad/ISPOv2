@@ -16,8 +16,12 @@
                             <div>
                                 <strong>Principle 1</strong>
                                 <ul>
-                                    <li>Land_Certificate.pdf</li>
-                                    <li>spatial_layout_determination.pdf</li>
+                                    <li>Land_Certificate.pdf <br>
+                                        <p class="card-text  text-start"><a formtarget="_blank" target="_blank" href="{{ isset($ispo->sertifikatTanah) ? ('storage/ispo/' . $ispo->sertifikatTanah) : '#' }}" class="badge bg-dark px-3 py-2">Buka</a></p>
+                                    </li>
+                                    <li>spatial_layout_determination.pdf <br>
+                                        <p class="card-text  text-start"><a formtarget="_blank" target="_blank" href="{{ isset($ispo->penetapanTataRuang) ? ('storage/ispo/' . $ispo->penetapanTataRuang) : '#' }}" class="badge bg-dark px-3 py-2">Buka</a></p>
+                                    </li>
                                     <li>Estate_Settlement_Document.pdf</li>
                                     <li>Crop_Agreement.pdf</li>
                                     <li>STDB.pdf</li>
@@ -91,14 +95,14 @@
                             </div>
                         </td>
                     </tr>
-        </tbody>
-        <tfoot class="table-light">
-            <tr>
-                <td class="text-center"><strong>ISPO Document Status</strong></td>
-                <td class="text-center">Applying for ISPO Certificate can now be done</td>
-            </tr>
-        </tfoot>
-        </table>
-    </div>
+                </tbody>
+                <tfoot class="table-light">
+                    <tr>
+                        <td class="text-center"><strong>ISPO Document Status</strong></td>
+                        <td class="text-center">Applying for ISPO Certificate can now be done</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
     </div>
 </x-layouts>

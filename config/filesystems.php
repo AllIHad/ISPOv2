@@ -57,6 +57,14 @@ return [
             'throw' => false,
         ],
 
+        'ispo' =>[
+            'driver' => 'local',
+            'root' => storage_path('app/public/ispo'),
+            'url' => env('APP_URL').'/storage/ispo',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
+
     ],
 
     /*

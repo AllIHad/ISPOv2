@@ -15,11 +15,11 @@
                     </div>
                     <div class="mb-3">
                         <label for="mature-plants" class="form-label">Mature Plants (TM) (ha)</label>
-                        <input type="text" class="form-control @error('plantationArea') is-invalid @enderror" id="mature-plants" name="maturePlant" value="{{ old('maturePlant', isset($plantation) ? $plantation->maturePlant : '')}}">
+                        <input type="text" class="form-control @error('maturePlant') is-invalid @enderror" id="mature-plants" name="maturePlant" value="{{ old('maturePlant', isset($plantation) ? $plantation->maturePlant : '')}}">
                     </div>
                     <div class="mb-3">
                         <label for="immature-plants" class="form-label">Immature Plants (TBM) (ha)</label>
-                        <input type="text" class="form-control @error('plantationArea') is-invalid @enderror" id="immature-plants" name="immaturePlant" value="{{ old('immaturePlant', isset($plantation) ? $plantation->immaturePlant : '')}}">
+                        <input type="text" class="form-control @error('immaturePlant') is-invalid @enderror" id="immature-plants" name="immaturePlant" value="{{ old('immaturePlant', isset($plantation) ? $plantation->immaturePlant : '')}}">
                     </div>
                     <div class="mb-3">
                         <label for="age-producing-plants" class="form-label">Age of Producing Oil Palm Plants (Year)</label>
