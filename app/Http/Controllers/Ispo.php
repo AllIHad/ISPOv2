@@ -470,7 +470,7 @@ class Ispo extends Controller
 
     public function detailIspo()
     {
-        $ispo = ModelsIspo::where('userID', Auth::user()->id)->first();
+        $ispo = ModelsIspo::where('userID', Auth::user()->id)->latest()->first();
 
         return view('dashboard.detailIspo',[
             'ispo' => $ispo
