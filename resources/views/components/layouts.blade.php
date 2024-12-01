@@ -30,6 +30,9 @@
 
     <!-- Template Stylesheet -->
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    @if(isset($head))
+    {{ $head }}
+    @endif
 </head>
 
 <body>
@@ -69,11 +72,11 @@
                         </form>
                         @else
                         <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Account </a>
-                                <div class="dropdown-menu bg-light mt-2">
-                                    <a href="{{ route('loginPage') }}" class="dropdown-item">Login</a>
-                                </div>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Account </a>
+                            <div class="dropdown-menu bg-light mt-2">
+                                <a href="{{ route('loginPage') }}" class="dropdown-item">Login</a>
                             </div>
+                        </div>
                         @endif
                     </div>
                 </div>
@@ -94,7 +97,7 @@
                         &copy; <a class="" href="{{ route('landingPage') }}">SIM.ISPO</a>, All Right Reserved.
 
                         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="" target="_blank" href="https://scholar.google.co.id/citations?user=KRJN1I8AAAAJ&hl=en">Noveri Lysbetti Marpaung S.T., MSc</a> 
+                        Designed By <a class="" target="_blank" href="https://scholar.google.co.id/citations?user=KRJN1I8AAAAJ&hl=en">Noveri Lysbetti Marpaung S.T., MSc</a>
                     </div>
                 </div>
             </div>
@@ -116,6 +119,10 @@
 
     <!-- Template Javascript -->
     <script src="{{asset('js/main.js')}}"></script>
+
+    @if(isset($script))
+    {{ $script }}
+    @endif 
 </body>
 
 </html>
