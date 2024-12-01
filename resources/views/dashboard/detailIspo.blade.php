@@ -254,7 +254,6 @@
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Oil Palm Smallholder Uploaded Documents</h5>
                             <figure class="highcharts-figure">
                                 <div id="highCharts1"></div>
                                 <p class="highcharts-description">
@@ -271,7 +270,6 @@
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Oil Palm Smallholder Uploaded Documents</h5>
                             <figure class="highcharts-figure">
                                 <div id="highCharts2"></div>
                                 <p class="highcharts-description">
@@ -294,7 +292,7 @@
                     type: 'pie'
                 },
                 title: {
-                    text: 'Egg Yolk Composition'
+                    text: 'Oil Palm Smallholder Uploaded Documents'
                 },
                 tooltip: {
                     valueSuffix: '%'
@@ -330,27 +328,14 @@
                     name: 'Percentage',
                     colorByPoint: true,
                     data: [{
-                            name: 'Water',
-                            y: 55.02
+                            name: 'Uploaded Documents',
+                            y: 95
                         },
                         {
-                            name: 'Fat',
-                            sliced: true,
-                            selected: true,
-                            y: 26.71
+                            name: 'Unuploaded Documents',
+                            color: 'red',
+                            y: 5
                         },
-                        {
-                            name: 'Carbohydrates',
-                            y: 1.09
-                        },
-                        {
-                            name: 'Protein',
-                            y: 15.5
-                        },
-                        {
-                            name: 'Ash',
-                            y: 1.68
-                        }
                     ]
                 }]
             });
@@ -360,7 +345,7 @@
                     type: 'pie'
                 },
                 title: {
-                    text: 'Egg Yolk Composition'
+                    text: 'Data Status of Oil Palm Smallholder Based on Validator'
                 },
                 tooltip: {
                     valueSuffix: '%'
@@ -396,27 +381,19 @@
                     name: 'Percentage',
                     colorByPoint: true,
                     data: [{
-                            name: 'Water',
-                            y: 55.02
+                            name: 'Documents Are Valid',
+                            y: 82
                         },
                         {
-                            name: 'Fat',
-                            sliced: true,
-                            selected: true,
-                            y: 26.71
+                            name: 'Invalid Documents',
+                            color:'gray',
+                            y: 13
                         },
                         {
-                            name: 'Carbohydrates',
-                            y: 1.09
+                            name: "Haven't Filled Out The Document",
+                            color:'red',
+                            y: 5
                         },
-                        {
-                            name: 'Protein',
-                            y: 15.5
-                        },
-                        {
-                            name: 'Ash',
-                            y: 1.68
-                        }
                     ]
                 }]
             });
