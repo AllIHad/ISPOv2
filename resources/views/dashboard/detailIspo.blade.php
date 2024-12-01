@@ -287,6 +287,8 @@
 
     <x-slot:script>
         <script>
+            let jumlahTidakNull = <?php echo json_encode($jumlahTidakNull) ?>;
+            let jumlahNull = <?php echo json_encode($jumlahNull) ?>;
             Highcharts.chart('highCharts1', {
                 chart: {
                     type: 'pie'
@@ -295,7 +297,7 @@
                     text: 'Oil Palm Smallholder Uploaded Documents'
                 },
                 tooltip: {
-                    valueSuffix: '%'
+                    valueSuffix: ' Files'
                 },
                 subtitle: {
                     text: 'Source:<a href="https://www.mdpi.com/2072-6643/11/3/684/htm" target="_default">MDPI</a>'
@@ -325,16 +327,16 @@
                     }
                 },
                 series: [{
-                    name: 'Percentage',
+                    name: 'Number Of Files',
                     colorByPoint: true,
                     data: [{
                             name: 'Uploaded Documents',
-                            y: 95
+                            y: jumlahTidakNull
                         },
                         {
                             name: 'Unuploaded Documents',
                             color: 'red',
-                            y: 5
+                            y: jumlahNull
                         },
                     ]
                 }]
@@ -386,12 +388,12 @@
                         },
                         {
                             name: 'Invalid Documents',
-                            color:'gray',
+                            color: 'gray',
                             y: 13
                         },
                         {
                             name: "Haven't Filled Out The Document",
-                            color:'red',
+                            color: 'red',
                             y: 5
                         },
                     ]

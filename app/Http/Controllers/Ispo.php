@@ -242,7 +242,7 @@ class Ispo extends Controller
             'durationOfEducation' => $request->durationOfEducation,
             'palmOilPlantationExperience' => $request->palmOilPlantationExperience,
             'otherJob' => $request->otherJob,
-            
+
         ]);
 
         return redirect('/dashboard')->with('success', 'Data Has Updated');
@@ -296,136 +296,136 @@ class Ispo extends Controller
             'perbaikanUsaha' => 'mimes:pdf|max:5000|nullable',
         ]);
 
-        if($request->hasFile('sertifikatTanah')){
-            $file1 = $request->file('sertifikatTanah')->store(options:'ispo');
+        if ($request->hasFile('sertifikatTanah')) {
+            $file1 = $request->file('sertifikatTanah')->store(options: 'ispo');
         }
 
-        if($request->hasFile('penetapanTataRuang')){
-            $file2 = $request->file('penetapanTataRuang')->store(options:'ispo');
+        if ($request->hasFile('penetapanTataRuang')) {
+            $file2 = $request->file('penetapanTataRuang')->store(options: 'ispo');
         }
 
-        if($request->hasFile('penyelesaianSengketa')){
-            $file3 = $request->file('penyelesaianSengketa')->store(options:'ispo');
+        if ($request->hasFile('penyelesaianSengketa')) {
+            $file3 = $request->file('penyelesaianSengketa')->store(options: 'ispo');
         }
 
-        if($request->hasFile('salinanPerjanjian')){
-            $file4 = $request->file('salinanPerjanjian')->store(options:'ispo');
+        if ($request->hasFile('salinanPerjanjian')) {
+            $file4 = $request->file('salinanPerjanjian')->store(options: 'ispo');
         }
 
-        if($request->hasFile('stdb')){
-            $file5 = $request->file('stdb')->store(options:'ispo');
+        if ($request->hasFile('stdb')) {
+            $file5 = $request->file('stdb')->store(options: 'ispo');
         }
 
-        if($request->hasFile('suratIzinLingkungan')){
-            $file6 = $request->file('suratIzinLingkungan')->store(options:'ispo');
+        if ($request->hasFile('suratIzinLingkungan')) {
+            $file6 = $request->file('suratIzinLingkungan')->store(options: 'ispo');
         }
 
-        if($request->hasFile('suratMemilikiKelambagaan')){
-            $file7 = $request->file('suratMemilikiKelambagaan')->store(options:'ispo');
+        if ($request->hasFile('suratMemilikiKelambagaan')) {
+            $file7 = $request->file('suratMemilikiKelambagaan')->store(options: 'ispo');
         }
 
-        if($request->hasFile('suratMemilikiKelambagaan')){
-            $file8 = $request->file('suratMemilikiKelambagaan')->store(options:'ispo');
+        if ($request->hasFile('suratMemilikiKelambagaan')) {
+            $file8 = $request->file('suratMemilikiKelambagaan')->store(options: 'ispo');
         }
 
-        if($request->hasFile('suratKelompokTani')){
-            $file9 = $request->file('suratKelompokTani')->store(options:'ispo');
+        if ($request->hasFile('suratKelompokTani')) {
+            $file9 = $request->file('suratKelompokTani')->store(options: 'ispo');
         }
 
-        if($request->hasFile('sertifikat')){
-            $file10 = $request->file('sertifikat')->store(options:'ispo');
+        if ($request->hasFile('sertifikat')) {
+            $file10 = $request->file('sertifikat')->store(options: 'ispo');
         }
 
-        if($request->hasFile('laporanKegiatanPerkebun')){
-            $file11 = $request->file('laporanKegiatanPerkebun')->store(options:'ispo');
+        if ($request->hasFile('laporanKegiatanPerkebun')) {
+            $file11 = $request->file('laporanKegiatanPerkebun')->store(options: 'ispo');
         }
 
-        if($request->hasFile('sop')){
-            $file12 = $request->file('sop')->store(options:'ispo');
+        if ($request->hasFile('sop')) {
+            $file12 = $request->file('sop')->store(options: 'ispo');
         }
 
-        if($request->hasFile('dokumenRencanaKegiatan')){
-            $file13 = $request->file('dokumenRencanaKegiatan')->store(options:'ispo');
+        if ($request->hasFile('dokumenRencanaKegiatan')) {
+            $file13 = $request->file('dokumenRencanaKegiatan')->store(options: 'ispo');
         }
 
-        if($request->hasFile('catatanAsalBenih')){
-            $file14 = $request->file('catatanAsalBenih')->store(options:'ispo');
+        if ($request->hasFile('catatanAsalBenih')) {
+            $file14 = $request->file('catatanAsalBenih')->store(options: 'ispo');
         }
 
-        if($request->hasFile('sopPenanaman')){
-            $file15 = $request->file('sopPenanaman')->store(options:'ispo');
+        if ($request->hasFile('sopPenanaman')) {
+            $file15 = $request->file('sopPenanaman')->store(options: 'ispo');
         }
 
-        if($request->hasFile('catatanPelaksanaanPenanaman')){
-            $file16 = $request->file('catatanPelaksanaanPenanaman')->store(options:'ispo');
+        if ($request->hasFile('catatanPelaksanaanPenanaman')) {
+            $file16 = $request->file('catatanPelaksanaanPenanaman')->store(options: 'ispo');
         }
 
-        if($request->hasFile('catatanPenanaman')){
-            $file17 = $request->file('catatanPenanaman')->store(options:'ispo');
+        if ($request->hasFile('catatanPenanaman')) {
+            $file17 = $request->file('catatanPenanaman')->store(options: 'ispo');
         }
 
-        if($request->hasFile('sopPemeliharaanTanaman')){
-            $file18 = $request->file('sopPemeliharaanTanaman')->store(options:'ispo');
+        if ($request->hasFile('sopPemeliharaanTanaman')) {
+            $file18 = $request->file('sopPemeliharaanTanaman')->store(options: 'ispo');
         }
 
-        if($request->hasFile('catatanPemupukanTanaman')){
-            $file19 = $request->file('catatanPemupukanTanaman')->store(options:'ispo');
-        }
-        
-        if($request->hasFile('ipm')){
-            $file20 = $request->file('ipm')->store(options:'ispo');
+        if ($request->hasFile('catatanPemupukanTanaman')) {
+            $file19 = $request->file('catatanPemupukanTanaman')->store(options: 'ispo');
         }
 
-        if($request->hasFile('suratPengendalianOPT')){
-            $file21 = $request->file('suratPengendalianOPT')->store(options:'ispo');
+        if ($request->hasFile('ipm')) {
+            $file20 = $request->file('ipm')->store(options: 'ispo');
         }
 
-        if($request->hasFile('acuanTeknisPanen')){
-            $file22 = $request->file('acuanTeknisPanen')->store(options:'ispo');
+        if ($request->hasFile('suratPengendalianOPT')) {
+            $file21 = $request->file('suratPengendalianOPT')->store(options: 'ispo');
         }
 
-        if($request->hasFile('catatanPelaksanaanPemanenan')){
-            $file23 = $request->file('catatanPelaksanaanPemanenan')->store(options:'ispo');
+        if ($request->hasFile('acuanTeknisPanen')) {
+            $file22 = $request->file('acuanTeknisPanen')->store(options: 'ispo');
         }
 
-        if($request->hasFile('petunjukTeknis')){
-            $file24 = $request->file('petunjukTeknis')->store(options:'ispo');
+        if ($request->hasFile('catatanPelaksanaanPemanenan')) {
+            $file23 = $request->file('catatanPelaksanaanPemanenan')->store(options: 'ispo');
         }
 
-        if($request->hasFile('pencegahanPenanggulanganKebakaran')){
-            $file25 = $request->file('pencegahanPenanggulanganKebakaran')->store(options:'ispo');
+        if ($request->hasFile('petunjukTeknis')) {
+            $file24 = $request->file('petunjukTeknis')->store(options: 'ispo');
         }
 
-        if($request->hasFile('keberadaanSatwaTumbuhan')){
-            $file26 = $request->file('keberadaanSatwaTumbuhan')->store(options:'ispo');
+        if ($request->hasFile('pencegahanPenanggulanganKebakaran')) {
+            $file25 = $request->file('pencegahanPenanggulanganKebakaran')->store(options: 'ispo');
         }
 
-        if($request->hasFile('keberadaanSatwaTumbuhanKebun')){
-            $file27 = $request->file('keberadaanSatwaTumbuhanKebun')->store(options:'ispo');
+        if ($request->hasFile('keberadaanSatwaTumbuhan')) {
+            $file26 = $request->file('keberadaanSatwaTumbuhan')->store(options: 'ispo');
         }
 
-        if($request->hasFile('informasiHargaTBS')){
-            $file28 = $request->file('informasiHargaTBS')->store(options:'ispo');
+        if ($request->hasFile('keberadaanSatwaTumbuhanKebun')) {
+            $file27 = $request->file('keberadaanSatwaTumbuhanKebun')->store(options: 'ispo');
         }
 
-        if($request->hasFile('catatanHargaTBSRealisasiPembelian')){
-            $file29 = $request->file('catatanHargaTBSRealisasiPembelian')->store(options:'ispo');
+        if ($request->hasFile('informasiHargaTBS')) {
+            $file28 = $request->file('informasiHargaTBS')->store(options: 'ispo');
         }
 
-        if($request->hasFile('sopPelayanan')){
-            $file30 = $request->file('sopPelayanan')->store(options:'ispo');
+        if ($request->hasFile('catatanHargaTBSRealisasiPembelian')) {
+            $file29 = $request->file('catatanHargaTBSRealisasiPembelian')->store(options: 'ispo');
         }
 
-        if($request->hasFile('pemberianInformasiKepadaPemangkuKepentingan')){
-            $file31 = $request->file('pemberianInformasiKepadaPemangkuKepentingan')->store(options:'ispo');
+        if ($request->hasFile('sopPelayanan')) {
+            $file30 = $request->file('sopPelayanan')->store(options: 'ispo');
         }
 
-        if($request->hasFile('tanggapanPermintaanInformasiDariPemangkuKepentingan')){
-            $file32 = $request->file('tanggapanPermintaanInformasiDariPemangkuKepentingan')->store(options:'ispo');
+        if ($request->hasFile('pemberianInformasiKepadaPemangkuKepentingan')) {
+            $file31 = $request->file('pemberianInformasiKepadaPemangkuKepentingan')->store(options: 'ispo');
         }
 
-        if($request->hasFile('perbaikanUsaha')){
-            $file33 = $request->file('perbaikanUsaha')->store(options:'ispo');
+        if ($request->hasFile('tanggapanPermintaanInformasiDariPemangkuKepentingan')) {
+            $file32 = $request->file('tanggapanPermintaanInformasiDariPemangkuKepentingan')->store(options: 'ispo');
+        }
+
+        if ($request->hasFile('perbaikanUsaha')) {
+            $file33 = $request->file('perbaikanUsaha')->store(options: 'ispo');
         }
 
         ModelsIspo::create([
@@ -471,9 +471,29 @@ class Ispo extends Controller
     public function detailIspo()
     {
         $ispo = ModelsIspo::where('userID', Auth::user()->id)->latest()->first();
+        
+        // Initialize counters
+        $jumlahNull = 0;
+        $jumlahTidakNull = -4;
 
-        return view('dashboard.detailIspo',[
-            'ispo' => $ispo
+        // Check if $ispo is not null and iterate over its columns
+        if ($ispo) {
+            foreach ($ispo->getAttributes() as $column => $value) {
+                if (is_null($value)) {
+                    $jumlahNull++;
+                } else {
+                    $jumlahTidakNull++;
+                }
+            }
+        }
+
+        // Debugging
+        // dd($jumlahNull, $jumlahTidakNull);
+
+        return view('dashboard.detailIspo', [
+            'ispo' => $ispo,
+            'jumlahTidakNull' => $jumlahTidakNull,
+            'jumlahNull' => $jumlahNull
         ]);
     }
 }
