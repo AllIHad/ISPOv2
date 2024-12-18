@@ -236,7 +236,7 @@
                                 </div>
                                 <div class="vl mt-4 p-2"></div>
                                 <div class="mt-4 caption">
-                                    <h4 class="text-left">Sistem Informasi<br>Teknik Elektro &<br>Informatika</h4>
+                                    <h4 class="text-left">Indonesia Sustainable<br>Palm Oil</h4>
                                 </div>
                             </div>
 
@@ -245,7 +245,7 @@
                                     class="form-control rounded-1 "
                                     name="username" id="username" value="" placeholder="username"
                                     autofocus required>
-                                <label class="label-nim" for="username">NIP/NIM <span class="text-danger">*</span></label>
+                                <label class="label-nim" for="username">Username/FullName <span class="text-danger">*</span></label>
                             </div>
 
 
@@ -262,18 +262,17 @@
                             </div>
 
                             <button class="w-100 btn btn-lg btn-success btn-login mt-4 rounded-1"
-                                type="submit">Masuk</button>
+                                type="submit">Login</button>
                         </form>
-                        <small class="kecil d-block text-center mt-3">Belum Punya Akun atau Lupa Password<br>(Hubungi Admin
-                            Prodi)<br></small>
+                        <small class="kecil d-block text-center mt-3">Please <a href="" class=" text-decoration-none"><small>Sign Up Here</small></a> </small>
 
                         <div class="hr-line-dashed mt-2 mb-2"></div>
 
                         <div class="footer text-center">
-                            <small>Dikembangkan oleh:</small> <br>
-                            <a class="pengembang" href="/developer" target="_blank"><b><small>TIM PRODI TEKNIK INFORMATIKA</small></b></a>
+                            <small>Designed By:</small> <br>
+                            <a class="pengembang" href="#" target="_blank"><b><small>Noveri Lysbetti Marpaung S.T., MSc</small></b></a>
                             <div class="mt-2">
-                                <small class="text-center" style="color: #98A2B3;">2024 © SITEI JTE UNRI</small>
+                                <small class="text-center" style="color: #98A2B3;">© SIM.ISPO, All Right Reserved.</small>
                             </div>
                         </div>
                     </main>

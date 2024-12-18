@@ -18,7 +18,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td rowspan="5" class="align-baseline text-center">Sumitro Purwasono</td>
+                            <td rowspan="5" class="align-baseline text-center">{{ $user->username }}</td>
                             <td>
                                 <div>
                                     <strong>Principle 1</strong>

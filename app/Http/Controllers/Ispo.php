@@ -213,6 +213,7 @@ class Ispo extends Controller
         // dd($user->all());    
 
         $user->update([
+            'username' => $request->username,
             'registrationNumber' => $request->registrationNumber,
             'email' => $request->email,
             'gender' => $request->gender,
@@ -471,6 +472,7 @@ class Ispo extends Controller
     public function detailIspo()
     {
         $ispo = ModelsIspo::where('userID', Auth::user()->id)->latest()->first();
+        $user = User::where('id', Auth::user()->id)->first();
         
         // Initialize counters
         $jumlahNull = 0;
@@ -493,7 +495,42 @@ class Ispo extends Controller
         return view('dashboard.detailIspo', [
             'ispo' => $ispo,
             'jumlahTidakNull' => $jumlahTidakNull,
-            'jumlahNull' => $jumlahNull
+            'jumlahNull' => $jumlahNull,
+            'user' => $user,
         ]);
+    }
+
+    public function adminDashboardPage(){
+        $users = User::where('role', '!=', '1')->latest()->get();
+
+        return view('dashboard.adminDashboard',[
+            'users' => $users
+        ]);
+    }
+
+    public function identityDetail($slug){
+        $user = User::where('id', $slug)->get();
+
+        return view('detail.identity',[
+            'users' => $user
+        ]);
+    }
+
+    public function plantationDetail($slug){
+        $plantations = Plantation::where('userID', $slug)->get();
+
+        return view('detail.plantation',[
+            'plantations' => $plantations
+        ]);
+    }
+
+    public function deleteIspo($slug){
+        $user = User::where('id', $slug)->firstOrFail();
+        $plantation = Plantation::where('userID', $slug)->firstOrFail();
+
+        $user->delete();
+        $plantation->delete();
+
+        return redirect()->route('adminDashboardPage');
     }
 }

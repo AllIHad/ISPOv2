@@ -12,6 +12,7 @@ class Ispo extends Model
 
     protected $fillable = [
         'userID',
+        'username',
         'sertifikatTanah',
         'penetapanTataRuang',
         'penyelesaianSengketa',

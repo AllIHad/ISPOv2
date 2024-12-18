@@ -56,7 +56,9 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto ">
                         <a href="{{ route('landingPage') }}" class="nav-item nav-link">Home</a>
-                        @if(Auth::user())
+                        @if(Auth::user() && Auth::user()->role == '1')
+                        <a href="{{ route('adminDashboardPage') }}" class="nav-item nav-link">Dashboard</a>
+                        @elseif(Auth::user() && Auth::user()->role == '0')
                         <a href="{{ route('dashboardPage') }}" class="nav-item nav-link">Dashboard</a>
                         @endif
                         @if(Auth::user())
