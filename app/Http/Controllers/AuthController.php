@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -27,24 +28,24 @@ class AuthController extends Controller
         return redirect('/login')->with('error', 'Authentication failed');
     }
 
-    public function register(Request $request)
+    public function register()
     {
+        return view('authorize.register');
+    }
 
-        $validate = request()->validate([
-            'namaPemilik' => 'required',
-            'asosiasi' => 'required',
-            'kontakAsosiai' => 'required',
-            'areaLahan' => 'required',
-            'kecamatanLahan' => 'required',
-            'batasWilayahLahan' => 'required',
-            'alamatLahan' => 'required',
-            'luasLahan' => 'required',
-            'username' => 'required',
-            'email' => 'required',
+    public function registered(Request $request)
+    {
+        $request->validate([
+            'username' => 'required|unique:users,username',
             'password' => 'required',
         ]);
 
-    
+        User::create([
+            'username' => $request->username,
+            'password' => $request->password,
+        ]);
+
+        return redirect('/login')->with('success', 'Account Registered Successfully');
     }
 
     public function logout()

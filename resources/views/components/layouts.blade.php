@@ -67,7 +67,7 @@
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Account </a>
                                 <div class="dropdown-menu bg-light mt-2">
-                                    <a href="feature.html" class="dropdown-item">Profile</a>
+                                    <a href="{{ route('identityDetail', Auth::user()->id) }}" class="dropdown-item">Profile</a>
                                     <button type="submit" class="dropdown-item">Logout </button>
                                 </div>
                             </div>

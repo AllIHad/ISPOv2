@@ -2,6 +2,7 @@
     <x-slot:slot>
         <div class="container my-5">
             <h4 class="border-bottom mb-4 pb-3">Plantattion Detail</h4>
+            @if($plantations->isNotEmpty())
             <div class="p-3 mt-2 mb-4 bg-light text-dark d-flex justify-content-center rounded gap-2">
                 @foreach($plantations as $plantation)
                 <div class="col-md-6">
@@ -144,6 +145,9 @@
                 </div>
                 @endforeach
             </div>
+            @else
+            <x-emptyPlantation />
+            @endif
         </div>
     </x-slot:slot>
 </x-layouts>

@@ -228,7 +228,7 @@
                 <div class="px-5">
                     <main class="w-100">
 
-                        <form class="form-login" action="{{ route('login') }}" method="POST" class="text-center mt-5">
+                        <form class="form-login" action="{{ route('register') }}" method="POST" class="text-center mt-5">
                             @csrf
                             <div class="d-flex bungkus justify-content-center">
                                 <div class="gambar p-3 mt-3">
@@ -262,9 +262,9 @@
                             </div>
 
                             <button class="w-100 btn btn-lg btn-success btn-login mt-4 rounded-1"
-                                type="submit">Login</button>
+                                type="submit">Register</button>
                         </form>
-                        <small class="kecil d-block text-center mt-3">Does Not Have An Account? Please <a href="{{ route('registerPage') }}" class=" text-decoration-none"><small>Register Here</small></a> </small>
+                        <small class="kecil d-block text-center mt-3">Have An Account? Please <a href="{{ route('loginPage') }}" class=" text-decoration-none"><small>Log In Here</small></a> </small>
 
                         <div class="hr-line-dashed mt-2 mb-2"></div>
 

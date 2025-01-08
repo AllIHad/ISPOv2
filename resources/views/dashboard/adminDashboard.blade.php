@@ -24,11 +24,11 @@
                             <td class="text-center">
                                 <a href="{{ route('identityDetail', $user->id) }}" class="text-primary">Identity</a> |
                                 <a href="{{ route('plantationDetail', $user->id) }}" class="text-primary">Plantation</a> |
-                                <a href="#" class="text-primary">ISPO Standard</a> |
+                                <a href="{{ route('ispoStandard', $user->id) }}" class="text-primary">ISPO Standard</a> |
                                 <form action="{{ route('deleteIspo', $user->id) }}" method="post">
                                     @csrf
                                     @method('delete')
-                                    <button type="submit" class="btn btn-link">Delete</button>
+                                    <button type="submit" class="btn btn-link text-danger">Delete</button>
                                 </form>
                             </td>
                         </tr>
