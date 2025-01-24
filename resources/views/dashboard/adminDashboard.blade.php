@@ -1,7 +1,11 @@
 <x-layouts>
+    <x-slot:head>
+    @notifyCss
+    </x-slot:head>
     <x-slot:slot>
         <div class="container my-5 vh-100 ">
-            <h4 class="text-center mb-4">Data On Oil Palm Smallholders Who Registered</h4>
+        @include('notify::components.notify')
+            <p class="text-center mb-4 fs-2 fw-bolder">Data On Oil Palm Smallholders Who Registered</p>
             <div class="table-responsive">
                 <table id="dataTable" class="table table-bordered align-middle">
                     <thead class="table-light text-center">
@@ -56,6 +60,14 @@
     </x-slot:slot>
 
     <x-slot:script>
+        <!-- Include jQuery and Toastr JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-toast-plugin/1.3.2/jquery.toast.min.js" integrity="sha512-zlWWyZq71UMApAjih4WkaRpikgY9Bz1oXIW5G0fED4vk14JjGlQ1UmkGM392jEULP8jbNMiwLWdM8Z87Hu88Fw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- Toast Notification -->
+        @notifyJs
+
+        <!-- Pagination -->
         <script>
             // JavaScript for Pagination
             const rowsPerPage = 10;

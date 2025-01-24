@@ -25,7 +25,8 @@ class AuthController extends Controller
             return redirect('/')->with('success', 'Authentication successful');
         }
 
-        return redirect('/login')->with('error', 'Authentication failed');
+        emotify('error','The user can not be found');
+        return redirect('/login');
     }
 
     public function register()
@@ -45,7 +46,8 @@ class AuthController extends Controller
             'password' => $request->password,
         ]);
 
-        return redirect('/login')->with('success', 'Account Registered Successfully');
+        emotify('success','Account Registered Successfully');
+        return redirect('/login');
     }
 
     public function logout()

@@ -11,16 +11,14 @@
     <title>SITEI | Universitas Riau</title>
 
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    @notifyCss
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <link href="https://sitei.ft.unri.ac.id/assets/css/signin.css" rel="stylesheet">
     <link href="https://sitei.ft.unri.ac.id/assets/css/style.css" rel="stylesheet">
-
     <link rel="stylesheet" href="https://sitei.ft.unri.ac.id/assets/plugins/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <!--<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />-->
-
 </head>
 <style>
     @media only screen and (max-width: 425px) {
@@ -200,7 +198,7 @@
 </style>
 
 <body style="background: radial-gradient(circle at top left, #f1faee, #ffffff);">
-
+    @include('notify::components.notify')
     <div class="container rounded rounded-sm bg-white shadow">
 
         <div class="row justify-content-center align-items-center">
@@ -246,6 +244,9 @@
                                     name="username" id="username" value="" placeholder="username"
                                     autofocus required>
                                 <label class="label-nim" for="username">Username/FullName <span class="text-danger">*</span></label>
+                                @error('username')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
                             </div>
 
 
@@ -258,7 +259,9 @@
                                         <i class="fas fa-eye-slash pointer" id="togglePassword"></i>
                                     </span>
                                 </div>
-
+                                @error('password')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <button class="w-100 btn btn-lg btn-success btn-login mt-4 rounded-1"
@@ -283,7 +286,7 @@
         </div>
 
     </div>
-
+    @notifyJs
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
     </script>

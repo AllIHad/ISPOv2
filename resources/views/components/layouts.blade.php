@@ -17,6 +17,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Ubuntu:wght@500;700&display=swap"
         rel="stylesheet">
 
+    <!-- Toast Notification -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" rel="stylesheet">
+
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -30,9 +33,9 @@
 
     <!-- Template Stylesheet -->
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
-    @if(isset($head))
-    {{ $head }}
-    @endif
+
+    {{ $head ?? '' }}
+
 </head>
 
 <body>
@@ -51,7 +54,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-dark p-0">
                 <a href="{{ route('landingPage') }}" class="navbar-brand">
-                    <h1 class="text-white">ISPO</h1>
+                    <p class="text-white fs-2 fw-bolder">ISPO</p>
                 </a>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto ">
@@ -122,9 +125,7 @@
     <!-- Template Javascript -->
     <script src="{{asset('js/main.js')}}"></script>
 
-    @if(isset($script))
-    {{ $script }}
-    @endif 
+    {{ $script ?? ''}}
 </body>
 
 </html>

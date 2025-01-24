@@ -246,6 +246,9 @@
                                     name="username" id="username" value="" placeholder="username"
                                     autofocus required>
                                 <label class="label-nim" for="username">Username/FullName <span class="text-danger">*</span></label>
+                                @error('username')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
                             </div>
 
 
@@ -258,7 +261,9 @@
                                         <i class="fas fa-eye-slash pointer" id="togglePassword"></i>
                                     </span>
                                 </div>
-
+                                @error('password')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
                             </div>
 
                             <button class="w-100 btn btn-lg btn-success btn-login mt-4 rounded-1"

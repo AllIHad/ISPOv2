@@ -495,13 +495,14 @@ class Ispo extends Controller
         $inValidCount = 0;
         $noDocumentCount = 0;
 
+        // Check if $ispo is valid, invalid or has no document
         if ($validCheck) {
             foreach ($validCheck->getAttributes() as $column => $value) {
                 if ($value === 'Valid') {
                     $validCount++;
                 } elseif ($value === 'Invalid') {
                     $inValidCount++;
-                } elseif($value === 'No Document'){
+                } elseif ($value === 'No Document') {
                     $noDocumentCount++;
                 }
             }
@@ -773,9 +774,19 @@ class Ispo extends Controller
 
     public function ispoStandard($slug)
     {
-        $ispo = ModelsIspo::where('userID', $slug)->latest()->firstOrFail();
-        $validCheck = Validator::where('userID', $slug)->latest()->first();
+        $ispo = ModelsIspo::where('userID', $slug)->latest()->first();
 
+        if (!$ispo) {
+            $users = User::where('role', '!=', '1')->latest()->get();
+            notify()->error('The user has not imputed a data');
+
+            return view('dashboard.adminDashboard',[
+                'users' => $users,
+            ]);
+        }
+        
+        $validCheck = Validator::where('userID', $slug)->latest()->first();
+        
         return view('form.validatorAdmin', [
             'ispo' => $ispo,
             'validCheck' => $validCheck,
